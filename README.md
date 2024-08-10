@@ -10,9 +10,6 @@ Specifically, the artifacts include:
 - `aflpp-edgeonly`: The shawdow mode of FunFuzz that conducts estimation-based power scheduling merely with edge coverage.
 - `aflgo-funexp`: A modified version of [AFLGo artifact](https://github.com/aflgo/aflgo) for the purpose of FunFuzz experiments (i.e., the `AllFunc` configuration described in the paper), which includes an extra customized compiler for extracting locations of function declarations, scripts for transforming the extracted locations into the format of target sites required by AFLGo, and a `README.md` documenting the experimental setups.
 
-
-```
-
 ## Benchmark
 
 Details of the real-world projects we select for evaluation. 
