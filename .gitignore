@@ -1,0 +1,8 @@
+.vscode
+.idea
+.DS_Store
+__pychache__
+trial*
+ignore
+*.o
+*.out
