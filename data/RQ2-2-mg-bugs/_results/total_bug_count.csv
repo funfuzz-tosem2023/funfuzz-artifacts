@@ -1,0 +1,11 @@
+,project,target,find_type,FunFuzz-total,FunFuzz-unique,AFL++-total,AFL++-unique,FairFuzz-total,FairFuzz-unique,AFLGo-total,AFLGo-unique,Entropic-total,Entropic-unique,K-Sched-total,K-Sched-unique
+0,libpng,libpng_read_fuzzer,reached,120,6,54,6,120,6,120,6,120,6,120,6
+1,libpng,libpng_read_fuzzer,triggered,40,3,24,4,27,2,36,3,60,3,27,2
+2,libsndfile,sndfile_fuzzer,reached,160,8,160,8,126,8,160,8,0,0,160,8
+3,libsndfile,sndfile_fuzzer,triggered,140,7,140,7,35,7,43,3,0,0,59,6
+4,libxml2,libxml2_xml_read_memory_fuzzer,reached,161,9,161,9,160,8,160,8,160,8,160,8
+5,libxml2,libxml2_xml_read_memory_fuzzer,triggered,83,6,85,6,21,2,20,1,38,2,20,1
+6,lua,lua,reached,42,3,37,3,19,1,0,0,0,0,20,1
+7,lua,lua,triggered,20,1,19,1,19,1,0,0,0,0,20,1
+8,sqlite3,sqlite3_fuzz,reached,270,16,258,16,173,12,133,11,188,10,112,9
+9,sqlite3,sqlite3_fuzz,triggered,92,8,79,7,35,4,20,2,28,3,3,2

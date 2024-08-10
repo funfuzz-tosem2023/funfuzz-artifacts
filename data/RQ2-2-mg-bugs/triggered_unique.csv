@@ -1,0 +1,7 @@
+,target,aflpp-unique,ksched-unique,entropic-unique,funfuzz-unique,aflgo-unique,fairfuzz-unique
+0,libpng_read_fuzzer,4,2,3,3,3,2
+1,sndfile_fuzzer,7,6,0,7,3,7
+2,libxml2_xml_read_memory_fuzzer,6,1,2,6,1,2
+3,lua,1,1,0,1,0,1
+4,sqlite3_fuzz,7,2,3,8,2,4
+,total,25,12,8,25,9,16

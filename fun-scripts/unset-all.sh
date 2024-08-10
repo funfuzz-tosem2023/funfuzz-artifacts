@@ -1,0 +1,16 @@
+unset AFLPP
+unset FUNFUZZ
+unset FAIRFUZZ
+unset SCRIPT
+unset SEEDS
+
+unset AFL_FUN_TEMP
+unset AFL_LLVM_INSTRUMENT
+unset FUN_DCC
+unset FUN_STATIC_FS
+unset FUN_UPDATE_PERIOD
+unset FUN_AFL_SCALE
+unset FUN_SCHEDULE_OFF
+unset FUN_LOG
+unset __FUN_CC_SHM_ID
+unset __FUN_HINT

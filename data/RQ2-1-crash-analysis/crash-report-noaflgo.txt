@@ -1,0 +1,886 @@
+===================================================
+fuzzer: aflpp
+---------------------------------------------------
+---------------------------------------------------
+target: mjs
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 37
+heap-buffer-overflow: 2
+stack-overflow: 3
+allocation-size-too-big: 1
+SEGV: 29
+memcpy-param-overlap: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<mjs.c:10731>-<SEGV>
+<mjs.c:13606>-<SEGV>
+<mjs.c:12988>-<SEGV>
+<mjs.c:8318>-<SEGV>
+<mjs.c:6800>-<SEGV>
+<mjs.c:7332>-<SEGV>
+<unknown-module>-<SEGV>
+<mjs.c:12901>-<SEGV>
+<mjs>-<SEGV>
+<mjs.c:13075>-<SEGV>
+<mjs.c:7260>-<SEGV>
+<mjs.c:8472>-<SEGV>
+<mjs.c:8824>-<SEGV>
+<mjs.c:13927>-<heap-buffer-overflow>
+<mjs.c:7268>-<stack-overflow>
+<mjs.c:7360>-<SEGV>
+<mjs.c:8531>-<heap-buffer-overflow>
+<mjs.c:9785>-<SEGV>
+<mjs.c:4055>-<allocation-size-too-big>
+<mjs.c:7362>-<SEGV>
+<mjs.c:5154>-<SEGV>
+<mjs.c:13301>-<memcpy-param-overlap>
+<mjs.c:7361>-<stack-overflow>
+<mjs.c:13462>-<SEGV>
+<mjs.c:7344>-<SEGV>
+<mjs.c:13302>-<memcpy-param-overlap>
+<mjs.c:8794>-<SEGV>
+<mjs.c:9046>-<SEGV>
+<mjs.c:7849>-<SEGV>
+<memmove-vec-unaligned-erms.S:307>-<SEGV>
+<mjs.c:7688>-<SEGV>
+<mjs.c:11364>-<SEGV>
+<mjs.c:7267>-<SEGV>
+<strlen-avx2.S:96>-<SEGV>
+<mjs.c:7266>-<SEGV>
+<mjs.c>-<SEGV>
+<mjs.c:7688>-<stack-overflow>
+---------------------------------------------------
+target: cxxfilt
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 32
+memory-leak: 1
+stack-overflow: 30
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<cp-demangle.c:5754>-<stack-overflow>
+<cp-demangle.c:2903>-<stack-overflow>
+<cp-demangle.c:5764>-<stack-overflow>
+<empty-stack>-<stack-overflow>
+<cp-demangle.c:5179>-<stack-overflow>
+<cp-demangle.c:4592>-<stack-overflow>
+<cp-demangle.c:5679>-<stack-overflow>
+<cp-demangle.c:5691>-<stack-overflow>
+<cp-demangle.c:2552>-<stack-overflow>
+<cp-demangle.c:5407>-<stack-overflow>
+<cp-demangle.c:3953>-<stack-overflow>
+<cp-demangle.c:5836>-<stack-overflow>
+<cp-demangle.c:4191>-<stack-overflow>
+<cp-demangle.c:4529>-<stack-overflow>
+<cp-demangle.c:2342>-<stack-overflow>
+<cplus-dem.c:2054>-<stack-overflow>
+<cp-demangle.c:3092>-<stack-overflow>
+<cp-demangle.c:6007>-<stack-overflow>
+<cplus-dem.c:4938>-<stack-overflow>
+<cp-demangle.c:3982>-<stack-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<cp-demangle.c:2546>-<stack-overflow>
+<cp-demangle.c:2558>-<stack-overflow>
+<cplus-dem.c:2396>-<stack-overflow>
+<xmalloc.c:148>-<stack-overflow>
+<xmalloc.c:148>-<memory-leak>
+<cp-demangle.c:5824>-<stack-overflow>
+<cp-demangle.c:4227>-<stack-overflow>
+<cplus-dem.c:4963>-<stack-overflow>
+<cp-demangle.c:2534>-<stack-overflow>
+<cp-demangle.c:5321>-<stack-overflow>
+<cp-demangle.c:2540>-<stack-overflow>
+---------------------------------------------------
+target: nm-new
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+memory-leak: 1
+out-of-memory: 2
+allocation-size-too-big: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<libbfd.c:184>-<out-of-memory>
+<objalloc.c:143>-<out-of-memory>
+<libbfd.c:184>-<allocation-size-too-big>
+<libbfd.c:184>-<memory-leak>
+<objalloc.c:143>-<allocation-size-too-big>
+---------------------------------------------------
+target: objdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 7
+out-of-memory: 2
+allocation-size-too-big: 3
+global-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<objalloc.c:143>-<out-of-memory>
+<i386-dis.c:14994>-<global-buffer-overflow>
+<libbfd.c:184>-<out-of-memory>
+<libbfd.c:184>-<allocation-size-too-big>
+<objalloc.c:143>-<allocation-size-too-big>
+<i386-dis.c:15486>-<global-buffer-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+---------------------------------------------------
+target: readelf
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 6
+memory-leak: 2
+out-of-memory: 1
+heap-buffer-overflow: 3
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<elfcomm.c:150>-<heap-buffer-overflow>
+<elfcomm.c:151>-<heap-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<readelf.c:392>-<memory-leak>
+<elfcomm.c:149>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: tcpdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+heap-buffer-overflow: 5
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<print-ripng.c:131>-<heap-buffer-overflow>
+<print-zephyr.c:95>-<heap-buffer-overflow>
+<print-decnet.c:545>-<heap-buffer-overflow>
+<print-pim.c:309>-<heap-buffer-overflow>
+<addrtoname.c:385>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: xmllint
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 1
+memory-leak: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xzlib.c:111>-<memory-leak>
+-------------------------------
++++++ Fuzzer Global Stats +++++
+-------------------------------
+aflpp-total: 93
+set-size-total: 93
+===================================================
+fuzzer: fairfuzz
+---------------------------------------------------
+---------------------------------------------------
+target: mjs
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 27
+out-of-memory: 1
+heap-buffer-overflow: 1
+stack-overflow: 2
+allocation-size-too-big: 1
+SEGV: 19
+memcpy-param-overlap: 2
+negative-size-param: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<mjs.c:10731>-<SEGV>
+<mjs.c:8318>-<SEGV>
+<mjs.c:6213>-<SEGV>
+<unknown-module>-<SEGV>
+<mjs>-<SEGV>
+<mjs.c:8472>-<SEGV>
+<mjs.c:8824>-<SEGV>
+<mjs.c:13927>-<heap-buffer-overflow>
+<mjs.c:7360>-<SEGV>
+<mjs.c:7350>-<SEGV>
+<mjs.c:4055>-<allocation-size-too-big>
+<mjs.c:4055>-<SEGV>
+<mjs.c:13301>-<negative-size-param>
+<mjs.c:7361>-<SEGV>
+<mjs.c:7362>-<SEGV>
+<mjs.c:13301>-<memcpy-param-overlap>
+<mjs.c:7361>-<stack-overflow>
+<mjs.c:13302>-<memcpy-param-overlap>
+<mjs.c:8794>-<SEGV>
+<mjs.c:9046>-<SEGV>
+<mjs.c:7849>-<SEGV>
+<memmove-vec-unaligned-erms.S:307>-<SEGV>
+<mjs.c:13437>-<SEGV>
+<mjs.c:7688>-<SEGV>
+<mjs.c:9044>-<SEGV>
+<mjs.c:4055>-<out-of-memory>
+<mjs.c:7688>-<stack-overflow>
+---------------------------------------------------
+target: cxxfilt
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 10
+memory-leak: 1
+stack-overflow: 8
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<cp-demangle.c:5754>-<stack-overflow>
+<cp-demangle.c:5764>-<stack-overflow>
+<cp-demangle.c:5179>-<stack-overflow>
+<cp-demangle.c:4592>-<stack-overflow>
+<cp-demangle.c:5679>-<stack-overflow>
+<cp-demangle.c:5691>-<stack-overflow>
+<cp-demangle.c:3982>-<stack-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<cp-demangle.c:5836>-<stack-overflow>
+---------------------------------------------------
+target: nm-new
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 7
+memory-leak: 1
+out-of-memory: 3
+heap-buffer-overflow: 1
+stack-buffer-overflow: 1
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<elf-attrs.c:472>-<heap-buffer-overflow>
+<libbfd.c:184>-<out-of-memory>
+<objalloc.c:143>-<out-of-memory>
+<nm-new>-<out-of-memory>
+<libbfd.c:184>-<memory-leak>
+<objalloc.c:143>-<allocation-size-too-big>
+<tekhex.c:276>-<stack-buffer-overflow>
+---------------------------------------------------
+target: objdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+out-of-memory: 1
+heap-buffer-overflow: 1
+allocation-size-too-big: 1
+global-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<elf-attrs.c:472>-<heap-buffer-overflow>
+<objalloc.c:143>-<out-of-memory>
+<i386-dis.c:14994>-<global-buffer-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<i386-dis.c:15486>-<global-buffer-overflow>
+---------------------------------------------------
+target: readelf
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 12
+memory-leak: 2
+out-of-memory: 1
+heap-buffer-overflow: 6
+SEGV: 3
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<elfcomm.c:150>-<heap-buffer-overflow>
+<elfcomm.c:148>-<heap-buffer-overflow>
+<elfcomm.c:81>-<SEGV>
+<readelf.c>-<SEGV>
+<elfcomm.c:151>-<heap-buffer-overflow>
+<elfcomm.c:81>-<heap-buffer-overflow>
+<elfcomm.c:75>-<SEGV>
+<elfcomm.c:75>-<heap-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<readelf.c:392>-<memory-leak>
+<elfcomm.c:149>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: tcpdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 12
+heap-buffer-overflow: 12
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<print-usb.c:88>-<heap-buffer-overflow>
+<extract.h:144>-<heap-buffer-overflow>
+<print-isakmp.c:3057>-<heap-buffer-overflow>
+<print-ripng.c:131>-<heap-buffer-overflow>
+<extract.h:150>-<heap-buffer-overflow>
+<print-zephyr.c:95>-<heap-buffer-overflow>
+<print-pim.c:309>-<heap-buffer-overflow>
+<util-print.c:905>-<heap-buffer-overflow>
+<print-chdlc.c:97>-<heap-buffer-overflow>
+<print-nfs.c:815>-<heap-buffer-overflow>
+<addrtoname.c:385>-<heap-buffer-overflow>
+<print-mobility.c:301>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: xmllint
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 2
+memory-leak: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xzlib.c:111>-<memory-leak>
+<a@:">0b&&&&&>-<memory-leak>
+-------------------------------
++++++ Fuzzer Global Stats +++++
+-------------------------------
+fairfuzz-total: 75
+set-size-total: 75
+===================================================
+fuzzer: fun
+---------------------------------------------------
+---------------------------------------------------
+target: mjs
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 45
+memory-leak: 1
+heap-buffer-overflow: 1
+stack-overflow: 3
+allocation-size-too-big: 1
+SEGV: 38
+memcpy-param-overlap: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<mjs.c:10731>-<SEGV>
+<mjs.c:8689>-<SEGV>
+<mjs.c:7348>-<SEGV>
+<mjs.c:8318>-<SEGV>
+<mjs.c:8730>-<SEGV>
+<unknown-module>-<SEGV>
+<mjs.c:7814>-<SEGV>
+<mjs>-<SEGV>
+<mjs.c:8472>-<SEGV>
+<mjs.c:8824>-<SEGV>
+<mjs.c:6878>-<SEGV>
+<mjs.c:13927>-<heap-buffer-overflow>
+<mjs.c:7268>-<stack-overflow>
+<mjs.c:7360>-<SEGV>
+<mjs.c:8728>-<SEGV>
+<mjs.c:9785>-<SEGV>
+<mjs.c:7350>-<SEGV>
+<mjs.c:4055>-<SEGV>
+<mjs.c:4055>-<allocation-size-too-big>
+<mjs.c:7322>-<SEGV>
+<mjs.c:7449>-<memory-leak>
+<mjs.c:7362>-<SEGV>
+<mjs.c:7671>-<SEGV>
+<mjs.c:7632>-<SEGV>
+<mjs.c:7361>-<stack-overflow>
+<mjs.c:13302>-<memcpy-param-overlap>
+<mjs.c:11690>-<SEGV>
+<mjs.c:7264>-<SEGV>
+<mjs.c:8794>-<SEGV>
+<mjs.c:7684>-<SEGV>
+<mjs.c:7640>-<SEGV>
+<mjs.c:9046>-<SEGV>
+<mjs.c:7854>-<SEGV>
+<mjs.c:7849>-<SEGV>
+<memmove-vec-unaligned-erms.S:307>-<SEGV>
+<mjs.c:7671>-<stack-overflow>
+<mjs.c:9788>-<SEGV>
+<mjs.c:7688>-<SEGV>
+<mjs.c:9790>-<SEGV>
+<mjs.c:7267>-<SEGV>
+<mjs.c:7351>-<SEGV>
+<mjs.c:13454>-<SEGV>
+<mjs.c:7347>-<SEGV>
+<mjs.c:7266>-<SEGV>
+<mjs.c>-<SEGV>
+---------------------------------------------------
+target: cxxfilt
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 31
+memory-leak: 1
+stack-overflow: 29
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<cp-demangle.c:5754>-<stack-overflow>
+<cplus-dem.c:4100>-<stack-overflow>
+<cp-demangle.c:5764>-<stack-overflow>
+<empty-stack>-<stack-overflow>
+<cp-demangle.c:5179>-<stack-overflow>
+<cp-demangle.c:4592>-<stack-overflow>
+<cp-demangle.c:5679>-<stack-overflow>
+<cp-demangle.c:5691>-<stack-overflow>
+<cp-demangle.c:2552>-<stack-overflow>
+<cp-demangle.c:3953>-<stack-overflow>
+<cp-demangle.c:5836>-<stack-overflow>
+<cp-demangle.c:4191>-<stack-overflow>
+<cp-demangle.c:2342>-<stack-overflow>
+<cp-demangle.c:4095>-<stack-overflow>
+<cp-demangle.c:6007>-<stack-overflow>
+<cplus-dem.c:4938>-<stack-overflow>
+<cp-demangle.c:3982>-<stack-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<cp-demangle.c:2546>-<stack-overflow>
+<cp-demangle.c:4401>-<stack-overflow>
+<cp-demangle.c:3991>-<stack-overflow>
+<cp-demangle.c:2558>-<stack-overflow>
+<cplus-dem.c:2396>-<stack-overflow>
+<xmalloc.c:148>-<stack-overflow>
+<xmalloc.c:148>-<memory-leak>
+<cp-demangle.c:5824>-<stack-overflow>
+<cp-demangle.c:4227>-<stack-overflow>
+<cp-demangle.c:4363>-<stack-overflow>
+<cplus-dem.c:4963>-<stack-overflow>
+<cp-demangle.c:2534>-<stack-overflow>
+<cp-demangle.c:2540>-<stack-overflow>
+---------------------------------------------------
+target: nm-new
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+memory-leak: 1
+out-of-memory: 2
+allocation-size-too-big: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<libbfd.c:184>-<out-of-memory>
+<objalloc.c:143>-<out-of-memory>
+<libbfd.c:184>-<allocation-size-too-big>
+<libbfd.c:184>-<memory-leak>
+<objalloc.c:143>-<allocation-size-too-big>
+---------------------------------------------------
+target: objdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 9
+out-of-memory: 3
+stack-buffer-overflow: 1
+allocation-size-too-big: 3
+global-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<tekhex.c:308>-<stack-buffer-overflow>
+<objalloc.c:143>-<out-of-memory>
+<i386-dis.c:14994>-<global-buffer-overflow>
+<libbfd.c:184>-<out-of-memory>
+<libbfd.c:184>-<allocation-size-too-big>
+<objalloc.c:143>-<allocation-size-too-big>
+<i386-dis.c:15486>-<global-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<xmalloc.c:148>-<allocation-size-too-big>
+---------------------------------------------------
+target: readelf
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 13
+memory-leak: 2
+out-of-memory: 1
+heap-buffer-overflow: 7
+SEGV: 3
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<elfcomm.c:150>-<heap-buffer-overflow>
+<readelf.c:11694>-<heap-buffer-overflow>
+<readelf.c:11631>-<heap-buffer-overflow>
+<elfcomm.c:81>-<SEGV>
+<readelf.c>-<SEGV>
+<elfcomm.c:151>-<heap-buffer-overflow>
+<readelf.c:11630>-<heap-buffer-overflow>
+<elfcomm.c:75>-<SEGV>
+<elfcomm.c:75>-<heap-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<readelf.c:392>-<memory-leak>
+<elfcomm.c:149>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: tcpdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 8
+out-of-memory: 1
+heap-buffer-overflow: 7
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<print-l2tp.c:271>-<heap-buffer-overflow>
+<libpcap.so.0.8>-<out-of-memory>
+<print-ripng.c:131>-<heap-buffer-overflow>
+<extract.h:150>-<heap-buffer-overflow>
+<print-l2tp.c:280>-<heap-buffer-overflow>
+<print-zephyr.c:95>-<heap-buffer-overflow>
+<util-print.c:905>-<heap-buffer-overflow>
+<addrtoname.c:385>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: xmllint
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 3
+memory-leak: 3
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xzlib.c:111>-<memory-leak>
+<K="GKKK>>0x>-<memory-leak>
+<valid.c:952>-<memory-leak>
+-------------------------------
++++++ Fuzzer Global Stats +++++
+-------------------------------
+fun-total: 114
+set-size-total: 114
+===================================================
+fuzzer: fun-static
+---------------------------------------------------
+---------------------------------------------------
+target: mjs
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 30
+memory-leak: 1
+heap-buffer-overflow: 2
+stack-overflow: 5
+allocation-size-too-big: 1
+SEGV: 21
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<mjs.c:10694>-<SEGV>
+<mjs.c:13302>-<heap-buffer-overflow>
+<mjs.c:10731>-<SEGV>
+<mjs.c:8318>-<SEGV>
+<mjs.c:7293>-<SEGV>
+<mjs.c:12901>-<SEGV>
+<unknown-module>-<SEGV>
+<mjs>-<SEGV>
+<mjs.c:8824>-<SEGV>
+<mjs.c:8472>-<SEGV>
+<mjs.c:9785>-<stack-overflow>
+<mjs.c:13927>-<heap-buffer-overflow>
+<mjs.c:7268>-<stack-overflow>
+<mjs.c:7360>-<SEGV>
+<mjs.c:7263>-<SEGV>
+<mjs.c:9785>-<SEGV>
+<mjs.c:7350>-<SEGV>
+<mjs.c:4055>-<allocation-size-too-big>
+<mjs.c:7355>-<SEGV>
+<mjs.c:7449>-<memory-leak>
+<mjs.c:7362>-<SEGV>
+<mjs.c:7631>-<SEGV>
+<mjs.c:7361>-<stack-overflow>
+<mjs.c:8794>-<SEGV>
+<mjs.c:9046>-<SEGV>
+<mjs.c:7849>-<SEGV>
+<mjs.c:7688>-<SEGV>
+<mjs.c:13657>-<stack-overflow>
+<mjs.c:7267>-<SEGV>
+<mjs.c:7688>-<stack-overflow>
+---------------------------------------------------
+target: cxxfilt
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 25
+memory-leak: 1
+stack-overflow: 23
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<cp-demangle.c:5754>-<stack-overflow>
+<cp-demangle.c:5764>-<stack-overflow>
+<empty-stack>-<stack-overflow>
+<cp-demangle.c:5179>-<stack-overflow>
+<cp-demangle.c:4592>-<stack-overflow>
+<cp-demangle.c:5679>-<stack-overflow>
+<cp-demangle.c:5691>-<stack-overflow>
+<cp-demangle.c:2552>-<stack-overflow>
+<cp-demangle.c:3953>-<stack-overflow>
+<cp-demangle.c:5836>-<stack-overflow>
+<cp-demangle.c:2342>-<stack-overflow>
+<cplus-dem.c:2054>-<stack-overflow>
+<cplus-dem.c:4938>-<stack-overflow>
+<cp-demangle.c:3982>-<stack-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<cp-demangle.c:2558>-<stack-overflow>
+<cp-demangle.c:4401>-<stack-overflow>
+<cplus-dem.c:2396>-<stack-overflow>
+<xmalloc.c:148>-<stack-overflow>
+<xmalloc.c:148>-<memory-leak>
+<cp-demangle.c:5824>-<stack-overflow>
+<cp-demangle.c:4227>-<stack-overflow>
+<cp-demangle.c:4363>-<stack-overflow>
+<cplus-dem.c:4963>-<stack-overflow>
+<cp-demangle.c:5603>-<stack-overflow>
+---------------------------------------------------
+target: nm-new
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+memory-leak: 1
+out-of-memory: 2
+allocation-size-too-big: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<libbfd.c:184>-<out-of-memory>
+<objalloc.c:143>-<out-of-memory>
+<libbfd.c:184>-<allocation-size-too-big>
+<libbfd.c:184>-<memory-leak>
+<objalloc.c:143>-<allocation-size-too-big>
+---------------------------------------------------
+target: objdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 8
+out-of-memory: 3
+allocation-size-too-big: 3
+global-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<objalloc.c:143>-<out-of-memory>
+<i386-dis.c:14994>-<global-buffer-overflow>
+<libbfd.c:184>-<out-of-memory>
+<libbfd.c:184>-<allocation-size-too-big>
+<objalloc.c:143>-<allocation-size-too-big>
+<i386-dis.c:15486>-<global-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<xmalloc.c:148>-<allocation-size-too-big>
+---------------------------------------------------
+target: readelf
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 7
+memory-leak: 2
+out-of-memory: 1
+heap-buffer-overflow: 4
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<elfcomm.c:150>-<heap-buffer-overflow>
+<elfcomm.c:148>-<heap-buffer-overflow>
+<elfcomm.c:151>-<heap-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<readelf.c:392>-<memory-leak>
+<elfcomm.c:149>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: tcpdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 10
+heap-buffer-overflow: 10
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<extract.h:144>-<heap-buffer-overflow>
+<extract.h:150>-<heap-buffer-overflow>
+<print-zephyr.c:95>-<heap-buffer-overflow>
+<print-pktap.c:113>-<heap-buffer-overflow>
+<print-aodv.c:192>-<heap-buffer-overflow>
+<print-pim.c:309>-<heap-buffer-overflow>
+<print-rt6.c:48>-<heap-buffer-overflow>
+<print-nfs.c:815>-<heap-buffer-overflow>
+<addrtoname.c:385>-<heap-buffer-overflow>
+<print-mobility.c:301>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: xmllint
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 1
+memory-leak: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xzlib.c:111>-<memory-leak>
+-------------------------------
++++++ Fuzzer Global Stats +++++
+-------------------------------
+fun-static-total: 86
+set-size-total: 86
+===================================================
+fuzzer: aflgo
+---------------------------------------------------
+---------------------------------------------------
+target: mjs
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 3
+SEGV: 3
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<mjs.c:8318>-<SEGV>
+<mjs.c:8472>-<SEGV>
+<mjs.c:8824>-<SEGV>
+---------------------------------------------------
+target: cxxfilt
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 17
+memory-leak: 1
+stack-overflow: 15
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<cp-demangle.c:5754>-<stack-overflow>
+<cp-demangle.c:2342>-<stack-overflow>
+<cp-demangle.c:1379>-<stack-overflow>
+<cp-demangle.c:3565>-<stack-overflow>
+<cp-demangle.c:4592>-<stack-overflow>
+<cplus-dem.c:4963>-<stack-overflow>
+<cp-demangle.c:5679>-<stack-overflow>
+<cp-demangle.c:1292>-<stack-overflow>
+<cp-demangle.c:2534>-<stack-overflow>
+<cp-demangle.c:2552>-<stack-overflow>
+<cp-demangle.c:3982>-<stack-overflow>
+<cplus-dem.c:4938>-<stack-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<cp-demangle.c:2546>-<stack-overflow>
+<cp-demangle.c:2563>-<stack-overflow>
+<xmalloc.c:148>-<stack-overflow>
+---------------------------------------------------
+target: nm-new
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 4
+memory-leak: 1
+out-of-memory: 2
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<libbfd.c:184>-<memory-leak>
+<objalloc.c:143>-<out-of-memory>
+<objalloc.c:143>-<allocation-size-too-big>
+<libbfd.c:184>-<out-of-memory>
+---------------------------------------------------
+target: objdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+out-of-memory: 1
+heap-buffer-overflow: 1
+allocation-size-too-big: 1
+global-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<elf-attrs.c:472>-<heap-buffer-overflow>
+<objalloc.c:143>-<out-of-memory>
+<i386-dis.c:14994>-<global-buffer-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+<i386-dis.c:15486>-<global-buffer-overflow>
+---------------------------------------------------
+target: readelf
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+memory-leak: 2
+out-of-memory: 1
+heap-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<elfcomm.c:150>-<heap-buffer-overflow>
+<xmalloc.c:148>-<out-of-memory>
+<readelf.c:392>-<memory-leak>
+<elfcomm.c:149>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: tcpdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 15
+heap-buffer-overflow: 15
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<print-802_11.c:2064>-<heap-buffer-overflow>
+<extract.h:144>-<heap-buffer-overflow>
+<print-sunatm.c:84>-<heap-buffer-overflow>
+<print-ipfc.c:55>-<heap-buffer-overflow>
+<print-ppp.c:1656>-<heap-buffer-overflow>
+<print-ripng.c:131>-<heap-buffer-overflow>
+<print-icmp6.c:1784>-<heap-buffer-overflow>
+<extract.h:150>-<heap-buffer-overflow>
+<print-enc.c:103>-<heap-buffer-overflow>
+<print-802_11.c:1192>-<heap-buffer-overflow>
+<print-zephyr.c:95>-<heap-buffer-overflow>
+<print-pktap.c:113>-<heap-buffer-overflow>
+<util-print.c:905>-<heap-buffer-overflow>
+<print-chdlc.c:97>-<heap-buffer-overflow>
+<addrtoname.c:385>-<heap-buffer-overflow>
+---------------------------------------------------
+Not find crash log: /root/qrx/aflpp_fun/r1-crash-analysis/aflgo/mutool/repro-crash
+---------------------------------------------------
+target: xmllint
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 1
+memory-leak: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xzlib.c:111>-<memory-leak>
+-------------------------------
++++++ Fuzzer Global Stats +++++
+-------------------------------
+aflgo-total: 50
+set-size-total: 50

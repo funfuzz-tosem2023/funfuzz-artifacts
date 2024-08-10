@@ -1,0 +1,11 @@
+,fun,fun-static,aflpp,fairfuzz,aflgo
+cxxfilt,135.0\tiny{\textpm7.1},134.2\tiny{\textpm9.0},127.4\tiny{\textpm7.9},109.3\tiny{\textpm6.4},80.8\tiny{\textpm6.8}
+nm-new,326.2\tiny{\textpm5.4},324.0\tiny{\textpm6.1},321.5\tiny{\textpm6.3},314.8\tiny{\textpm9.6},308.2\tiny{\textpm9.4}
+objdump,508.8\tiny{\textpm14.4},487.2\tiny{\textpm8.5},486.0\tiny{\textpm12.2},456.9\tiny{\textpm25.5},497.7\tiny{\textpm12.4}
+readelf,267.0\tiny{\textpm5.9},262.2\tiny{\textpm6.7},261.9\tiny{\textpm8.6},235.6\tiny{\textpm12.6},222.6\tiny{\textpm10.1}
+djpeg,330.8\tiny{\textpm5.3},325.0\tiny{\textpm6.8},323.3\tiny{\textpm5.6},321.6\tiny{\textpm8.2},306.2\tiny{\textpm4.9}
+readpng,82.0\tiny{\textpm0.0},82.0\tiny{\textpm0.0},82.0\tiny{\textpm0.0},82.0\tiny{\textpm0.0},82.0\tiny{\textpm0.0}
+mjs,72.7\tiny{\textpm1.5},72.6\tiny{\textpm0.7},72.0\tiny{\textpm1.2},70.0\tiny{\textpm0.0},71.1\tiny{\textpm1.2}
+mutool,146.9\tiny{\textpm0.3},147.0\tiny{\textpm0.2},146.8\tiny{\textpm0.4},146.9\tiny{\textpm0.3},
+tcpdump,73.0\tiny{\textpm0.0},73.0\tiny{\textpm0.0},73.0\tiny{\textpm0.0},73.0\tiny{\textpm0.0},73.0\tiny{\textpm0.0}
+xmllint,304.4\tiny{\textpm29.7},287.4\tiny{\textpm20.2},276.6\tiny{\textpm19.1},310.6\tiny{\textpm23.7},244.0\tiny{\textpm7.6}

@@ -1,0 +1,6 @@
+,project,target,FunFuzz-total,FunFuzz-unique,AFL++-total,AFL++-unique,FairFuzz-total,FairFuzz-unique,AFLGo-total,AFLGo-unique,Entropic-total,Entropic-unique,K-Sched-total,K-Sched-unique
+0,libpng,libpng_read_fuzzer,120,6,54,6,120,6,120,6,120,6,120,6
+1,libsndfile,sndfile_fuzzer,160,8,160,8,126,8,160,8,0,0,160,8
+2,libxml2,libxml2_xml_read_memory_fuzzer,244,9,246,9,181,8,180,8,198,8,180,8
+3,lua,lua,42,3,37,3,19,1,0,0,0,0,20,1
+4,sqlite3,sqlite3_fuzz,270,16,258,16,173,12,133,11,188,10,112,9

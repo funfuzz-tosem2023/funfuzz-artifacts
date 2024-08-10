@@ -1,0 +1,140 @@
+===================================================
+fuzzer: aflgo
+---------------------------------------------------
+---------------------------------------------------
+target: mjs
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 3
+SEGV: 3
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<mjs.c:8824>-<SEGV>
+<mjs.c:8318>-<SEGV>
+<mjs.c:8472>-<SEGV>
+---------------------------------------------------
+target: cxxfilt
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 17
+memory-leak: 1
+stack-overflow: 15
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<cplus-dem.c:4963>-<stack-overflow>
+<cp-demangle.c:5754>-<stack-overflow>
+<cplus-dem.c:4938>-<stack-overflow>
+<xmalloc.c:148>-<stack-overflow>
+<cp-demangle.c:5679>-<stack-overflow>
+<cp-demangle.c:1292>-<stack-overflow>
+<cp-demangle.c:1379>-<stack-overflow>
+<cp-demangle.c:4592>-<stack-overflow>
+<cp-demangle.c:2342>-<stack-overflow>
+<cp-demangle.c:3982>-<stack-overflow>
+<cp-demangle.c:2563>-<stack-overflow>
+<cp-demangle.c:2534>-<stack-overflow>
+<cp-demangle.c:2552>-<stack-overflow>
+<cp-demangle.c:2546>-<stack-overflow>
+<cp-demangle.c:3565>-<stack-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+---------------------------------------------------
+target: nm-new
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 4
+memory-leak: 1
+out-of-memory: 2
+allocation-size-too-big: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<objalloc.c:143>-<allocation-size-too-big>
+<libbfd.c:184>-<out-of-memory>
+<libbfd.c:184>-<memory-leak>
+<objalloc.c:143>-<out-of-memory>
+---------------------------------------------------
+target: objdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+out-of-memory: 1
+heap-buffer-overflow: 1
+allocation-size-too-big: 1
+global-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<i386-dis.c:15486>-<global-buffer-overflow>
+<objalloc.c:143>-<out-of-memory>
+<i386-dis.c:14994>-<global-buffer-overflow>
+<elf-attrs.c:472>-<heap-buffer-overflow>
+<xmalloc.c:148>-<allocation-size-too-big>
+---------------------------------------------------
+target: readelf
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 5
+memory-leak: 2
+out-of-memory: 1
+heap-buffer-overflow: 2
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xmalloc.c:148>-<memory-leak>
+<elfcomm.c:149>-<heap-buffer-overflow>
+<readelf.c:392>-<memory-leak>
+<xmalloc.c:148>-<out-of-memory>
+<elfcomm.c:150>-<heap-buffer-overflow>
+---------------------------------------------------
+---------------------------------------------------
+target: tcpdump
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 15
+heap-buffer-overflow: 15
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<extract.h:144>-<heap-buffer-overflow>
+<util-print.c:905>-<heap-buffer-overflow>
+<print-802_11.c:2064>-<heap-buffer-overflow>
+<print-ipfc.c:55>-<heap-buffer-overflow>
+<print-ppp.c:1656>-<heap-buffer-overflow>
+<print-802_11.c:1192>-<heap-buffer-overflow>
+<print-ripng.c:131>-<heap-buffer-overflow>
+<print-icmp6.c:1784>-<heap-buffer-overflow>
+<print-pktap.c:113>-<heap-buffer-overflow>
+<extract.h:150>-<heap-buffer-overflow>
+<addrtoname.c:385>-<heap-buffer-overflow>
+<print-chdlc.c:97>-<heap-buffer-overflow>
+<print-zephyr.c:95>-<heap-buffer-overflow>
+<print-sunatm.c:84>-<heap-buffer-overflow>
+<print-enc.c:103>-<heap-buffer-overflow>
+---------------------------------------------------
+Not find crash log: /Users/adian/Desktop/research/aflpp_fun/tosem/responses/R1/data/RQ2-1-crash-analysis/aflgo/mutool/repro-crash
+---------------------------------------------------
+target: xmllint
+------------------------
++++++ Crash Counts +++++
+------------------------
+total: 1
+memory-leak: 1
+-------------------------
++++++ Crash Details +++++
+-------------------------
+<xzlib.c:111>-<memory-leak>
+-------------------------------
++++++ Fuzzer Global Stats +++++
+-------------------------------
+aflgo-total: 50
+set-size-total: 50

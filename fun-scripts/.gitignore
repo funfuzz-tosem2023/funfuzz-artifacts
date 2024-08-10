@@ -1,0 +1,9 @@
+.idea
+._DS_Store
+__pycache__
+
+trial*
+ignore
+
+*.o
+*.out

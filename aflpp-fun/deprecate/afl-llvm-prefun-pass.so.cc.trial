@@ -1,0 +1,42 @@
+#ifndef LLVM_PREFUN_PASS
+#define LLVM_PREFUN_PASS
+
+#include "llvm/IR/PassManager.h"
+
+#include "config.h"
+#include "debug.h"
+#include "afl-llvm-common.h"
+
+/*
+  - Namespaces provide a method for preventing name conflicts in large projects.
+
+  - Symbols declared inside a namespace block are placed in a named scope that
+    prevents them from being mistaken for identically-named symbols in other
+    scopes.
+
+  - Multiple namespace blocks with the same name are allowed. All declarations
+    within those blocks are declared in the named scope.
+
+  - (LLVM Reference) Our class is in the llvm namespace so that we don’t pollute
+    the global namespace.
+ */
+using namespace llvm;
+
+class PreFunPass : public PassInfoMixin<PreFunPass> {
+
+ public:
+  // Method Declaration: run on each function. The nature of `run` is determined
+  // by its parameter list.
+  PreservedAnalyses run(Function &F, FunctionAnalysisManager &AM);
+};
+
+// Method definition
+PreservedAnalyses PreFunPass::run(Function &F,
+                                  FunctionAnalysisManager &AM) {
+  FUN_LOG("run on function...");
+  errs() << F.getName() << "\n";
+  return PreservedAnalyses::all();
+}
+
+
+#endif // LLVM_PREFUN_PASS
